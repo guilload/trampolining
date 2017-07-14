@@ -32,10 +32,10 @@ def trampolineIsOdd(n: Int): Trampoline[Boolean] = {
     else Trampoline.call(trampolineIsEven(n - 1))
 }
 
-def IsEven(n: Int): Boolean = {
+def isEven(n: Int): Boolean = {
     trampoline(trampolineIsEven(n))
 }
 
-def IsOdd(n: Int): Boolean = {
+def isOdd(n: Int): Boolean = {
     trampoline(trampolineIsOdd(n))
 }
